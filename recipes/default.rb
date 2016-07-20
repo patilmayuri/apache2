@@ -18,6 +18,10 @@
 # limitations under the License.
 #
 
+apt_update 'apt update' do
+  action :update
+end
+
 package 'apache2' do
   package_name node['apache']['package']
   default_release node['apache']['default_release'] unless node['apache']['default_release'].nil?
