@@ -17,6 +17,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+apt_update 'apt update' do
+  action :update
+end
 
 package 'apache2' do
   package_name node['apache']['package']
